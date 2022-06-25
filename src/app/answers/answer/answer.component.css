@@ -1,0 +1,64 @@
+.container {
+    width: calc(100vw - 50px);
+    height: calc(100vh - 55px);
+    background-color: rgb(24, 21, 21);
+    position: relative;
+    left: 50px;
+    display: flex;
+    transition: 0.3s;
+    overflow-y: scroll;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    flex-direction: column;
+}
+
+.inner-container {
+    width: 90%;
+    border-bottom: 1px solid rgb(21, 201, 36);
+    margin: 10px;
+}
+
+/* .question {
+    border: none;
+} */
+.ans {
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.question {
+    border: none;
+}
+
+.add-ans {
+    /* color: black; */
+    font-size: 35px;
+    display: block;
+    position: relative;
+    left: 20px;
+    background-color: rgb(24, 21, 21);
+    border: none;
+}
+
+.ans-input {
+    position: relative;
+    left: 20px;
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    color: black;
+    font-size: 18px;
+}
+
+.input button {
+    position: relative;
+    left: 30px;
+    bottom: 10px;
+    color: rgb(204, 195, 195);
+    padding: 2px 10px;
+    border-radius: 2px;
+    background-color: rgb(21, 197, 36);
+    border: 1px solid green;
+    padding: 6px 15px;
+}

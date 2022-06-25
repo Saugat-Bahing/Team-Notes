@@ -1,0 +1,8 @@
+<div class="container" [style.left]="toggle=='0'?'300px':'50px'" [style.width]="toggle=='0'?'calc(100vw - 300px)':'calc(100vw - 50px)'">
+    <div class="query" [style.width]="toggle=='0'?'80%':'60%'">
+        <div>Question</div>
+        <input type="text" autocomplete="nope" [(ngModel)]="inputValue">
+        <button (click)="ask()">Ask</button>
+    </div>
+</div>
+ 

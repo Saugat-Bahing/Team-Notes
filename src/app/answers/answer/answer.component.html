@@ -1,0 +1,21 @@
+<div class="container" [style.left]="toggle=='0'?'300px':'50px'" [style.width]="toggle=='0'?'calc(100vw - 300px)':'calc(100vw - 50px)'">
+    <div class="inner-container" *ngFor="let question of questions; let i = index">
+        <div class="question" >
+            {{i+1}}) {{ question[1] }}
+        </div>
+        <div class="answers" *ngFor="let ans of answers">
+            <div *ngIf="ans[0]==question[0]">
+                <div class="ans" *ngFor="let a of ans[1]; let j = index">
+                    <!-- <ng-template [ngIf]="j != 0"> -->
+                        {{j}}. {{ a }}
+                    <!-- </ng-template> -->
+                </div>
+            </div>
+        </div>
+        <button class="add-ans" (click)="toggleShow(i)">+</button>
+        <div class="input" *ngIf="showAdd[i]">
+            <textarea name="ans-input" id="ans-input" class="ans-input" [(ngModel)]="inputValue"></textarea>
+            <button class="btn btn-primary" (click)="add(i+1)">Add</button>
+        </div>
+    </div>
+</div>

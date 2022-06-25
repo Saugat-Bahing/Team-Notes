@@ -1,0 +1,34 @@
+<div class="sidebar" [ngClass]="{'sidebar-transition' : dashState}">
+    <div class="dash-header">
+        <div class="sidebar-label">Team Notes</div>
+        <div class="hamburger" [style.display]="hamDisplay" (click)="toggleDash()" (mouseover)="hamColor()"
+            (mouseout)="hamColor1()">
+            <div [style.background-color]="ham_color"></div>
+            <div [style.background-color]="ham_color"></div>
+            <div [style.background-color]="ham_color"></div>
+        </div>
+        <div class="cross" [style.display]="crossDisplay" (click)="toggleDash()" (mouseover)="crossColor()"
+            (mouseout)="crossColor1()">
+            <div [style.background-color]="cross_color"></div>
+            <div [style.background-color]="cross_color"></div>
+        </div>
+    </div>
+    <div class="dashbody">
+        <div class="profile">
+            <div class="profile-img">
+                <div></div>
+            </div>
+            <div class="profile-info">Name</div>
+        </div>
+        <a [routerLink]="'/query'">
+            <div class="query">
+                <h5>Query</h5>
+            </div>
+        </a>
+        <a [routerLink]="'/answers'">
+            <div class="answer">
+                <h5>Answer</h5>
+            </div>
+        </a>
+    </div>
+</div>
